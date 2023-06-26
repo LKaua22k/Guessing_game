@@ -82,7 +82,7 @@ button{
     transition: 0.3s;
 }
 
-form button:hover{
+button:hover{
     background-color:#8080d6;
 }
 
@@ -91,4 +91,8 @@ h2{
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 3.3rem;
+}
+
+.screen2 button{
+    border-radius: 0.4rem   ;
 }
