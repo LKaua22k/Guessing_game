@@ -3,11 +3,11 @@ const screen2 = document.querySelector('.screen2');
 const InputNumber = document.querySelector('#InputNumber');
 const Trybutton = document.querySelector('#Trybutton');
 const againButton = document.querySelector('#againButton');
+const radomNumber = Math.round(Math.random() * 10)
 let x = 1
 
 function ButtonTry(event) {
     event.preventDefault()
-    const radomNumber = Math.round(Math.random() * 10)
     console.log(radomNumber)
     
     if(InputNumber.value == radomNumber){
