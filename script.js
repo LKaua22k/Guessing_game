@@ -8,6 +8,7 @@ let x = 1
 function ButtonTry(event) {
     event.preventDefault()
     const radomNumber = Math.round(Math.random() * 10)
+    console.log(radomNumber)
     
     if(InputNumber.value == radomNumber){
         toggleHide()
