@@ -3,16 +3,22 @@ const screen2 = document.querySelector('.screen2');
 const InputNumber = document.querySelector('#InputNumber');
 const Trybutton = document.querySelector('#Trybutton');
 const againButton = document.querySelector('#againButton');
-const radomNumber = Math.round(Math.random() * 10)
+let radomNumber = Math.round(Math.random() * 10);
 let x = 1
+
+InputNumber.focus()
 
 function ButtonTry(event) {
     event.preventDefault()
-    console.log(radomNumber)
     
+    if(InputNumber.value < 0 || InputNumber.value > 10){
+        InputNumber.focus()
+        InputNumber.value = ""
+        return alert('Numero Invalido!')
+    }
+
     if(InputNumber.value == radomNumber){
         toggleHide()
-
         document.querySelector('h2').innerText = `Acertou em ${x} tentativas`
     }
 
@@ -21,6 +27,7 @@ function ButtonTry(event) {
 }
 
 function ButtonAgain() {
+    radomNumber = Math.round(Math.random() * 10)
     toggleHide()
     x = 1
 }
@@ -38,6 +45,5 @@ function toggleHide(){
     screen2.classList.toggle('hide')
 }
 
-Trybutton.addEventListener('click', ButtonTry)
-againButton.addEventListener('click', ButtonAgain)
-
+Trybutton.addEventListener('click', ButtonTry);
+againButton.addEventListener('click', ButtonAgain);
