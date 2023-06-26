@@ -8,6 +8,7 @@
     --text-color:#34355B;
     --btn-color:#7879F1;
     --white-color:#ffff;
+    --input-color:#DCE2E9;
     --font-monte: 'Montserrat', sans-serif;
     --font-dm:'DM Sans', sans-serif;
     
@@ -20,6 +21,10 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+}
+
+.hide{
+    display: none;
 }
 
 body,input,button{
@@ -43,9 +48,47 @@ main h1{
 }
 
 main p{
+    color: var(--text-color);
+    opacity: 0.8;
     margin-top: 1.6rem;
 }
 
 form{
     margin-top: 4.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+form input,button{
+    padding: 1.6rem;
+    border: none;
+}
+
+form input{
+    width: 6rem;
+    background-color: var(--input-color);
+    border-radius: 0.4rem 0 0.4rem;
+    color: var(--text-color);
+}
+
+button{
+    background-color: var(--btn-color);
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 0 0.4rem 0.4em 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color:#8080d6;
+}
+
+h2{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 3.3rem;
 }
